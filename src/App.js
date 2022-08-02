@@ -1,7 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import { student } from './services/students';
+let student = new Student();
+
 
 function App() {
+
+  let students = student.fetchAll();
+  for (let student of students) {
+    console.log(student);
+  }
+  
+
   return (
     <div className="App">
       <header className="App-header">
@@ -16,6 +26,8 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
+
+
         </a>
       </header>
     </div>
